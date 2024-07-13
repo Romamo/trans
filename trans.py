@@ -1,6 +1,4 @@
-# coding: utf8
-
-u""" This module translates national characters into similar
+""" This module translates national characters into similar
 sounding latin characters (transliteration).
 
 At the moment, Czech, Greek, Latvian, Polish, Turkish, Russian, Ukrainian
@@ -266,7 +264,7 @@ if PY2:
             return None
 
         if table_name not in trans.tables:
-            raise ValueError(u"Table {0!r} not found in tables!").format(table_name)
+            raise ValueError("Table {0!r} not found in tables!").format(table_name)
 
         return codecs.CodecInfo(lambda i, e='strict': encode(i, e, table_name), no_decode)
 
